@@ -34,5 +34,11 @@
 # Hint: Also, remember to use % to get the one's digit, and use //= to get rid of the one's digit.
 
 def playstep2(hand, dice):
+	a=hand%10
+	b=(hand//10)%10
+	c=hand//100
+	if(a==b):
+  		
+  		
 	# your code goes here
-	pass
+	
