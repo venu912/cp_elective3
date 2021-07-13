@@ -37,7 +37,54 @@ def playstep2(hand, dice):
 	a=hand%10
 	b=(hand//10)%10
 	c=hand//100
-	if(a==b):
+
+	p=dice%10
+	q=(dice//10)%10
+	r=(dice//100)%10
+	s=(dice//1000)%10
+
+	if(a==b or a==c or b==c):
+		z,y=highest(p,q,r)
+		x=dicetoorderedhand(a,b,z)  	
+		return x,y
+	else:
+		i,j=highest(a,b,c)	
+		k=dicetoorderedhand(i,p,q)
+		return k,s*10+r
+
+def	highest(a,b,c):
+	if(a>b):
+		if(a>c):
+			return a,c*10+b
+		else:
+			return c,b*10+a
+	else:
+		if(b>c):
+			return b,c*10+a
+		else:
+			return c,b*10+a
+
+def dicetoorderedhand(a, b, c):
+	if(a==b==c):
+		return a*100+b*10+c
+	else:  			
+		if(a>b):
+			if(a>c):
+				if(b>c):
+					return a*100+b*10+c
+				else:
+					return a*100+c*10+b
+			else:
+				return c*100+a*10+b
+		else:
+			if(b>c):
+				if(a>c):
+					return b*100+a*10+c
+				else:
+					return b*100+c*10+a
+			else:
+				if(c>a):
+					return c*100+b*10+a
   		
   		
 	# your code goes here
