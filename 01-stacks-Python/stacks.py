@@ -33,8 +33,7 @@ class LinkedList(object):
         "Delete the first (head) element in the LinkedList as return it"
         if(self.head):
             delete=self.head
-            new=delete.next   
-            self.head=new
+            self.head=delete.next   
             return delete
         else:
             return None
