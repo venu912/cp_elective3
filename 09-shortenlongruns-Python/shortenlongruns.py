@@ -10,5 +10,26 @@
 
 
 def shortenlongruns(L, k):
-	# Your code goes here
-	pass
+		# # Your code goes here
+		# c=0
+		# i=0
+		# length=len(L)
+		# #for i in range(len(L)+1):
+		# while(length+1):	
+		# 	if(L[i]==L[i+1]):
+		# 		c+=1
+		# 		if(k-1==c):
+		# 			del L[i+1]
+		# 			length-=1
+		# 	i+=1
+		# 	if(i==length):
+  	# 			return L
+		i=0
+		while(len(L)):
+			if(i==k):
+  				continue
+				#	del L[i]
+			i+=1
+		return L
+
+print(shortenlongruns([2, 3, 5, 5, 5, 3], 2))
