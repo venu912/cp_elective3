@@ -20,7 +20,7 @@
 def ishappynumber(n):
 	if(n==1):
 		return True
-	elif(n<10):
+	elif(n<1):
   		return False
 	a=sum_of_digits(n)
 	if(a==1):
