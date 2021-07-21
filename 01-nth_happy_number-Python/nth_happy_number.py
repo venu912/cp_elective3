@@ -16,29 +16,18 @@
 
 
 def nth_happy_number(n):
-		found=1
-		guess=1
-		count=0
-		while(found):
-			if(ishappynumber(guess)):
-
-				if(n==count):
-					found=0
-					return guess
-
-				guess=guess+1
-				count+=1
-			else:
-				guess=guess+1	
+	found = 0
+	guess = 0
+	while (found < n):
+			guess += 1
+			if (ishappynumber(guess)):
+					found += 1
+	return guess
 
 def ishappynumber(n):
-		if(n==1):
-			return True
-		elif(n<10):
-				return False
 		a=sum_of_digits(n)
 		if(a==1):
-				return True
+				return a
 		elif(a<10):
 				return False
 
