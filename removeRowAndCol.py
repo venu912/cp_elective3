@@ -22,9 +22,7 @@
 #   [ 0, 1, 3] ]
 
 def removeRowAndCol(L, row, col):
-    if(row<0 or col<0 or row>len(L) or col>len(L[0])):
-        return None
-    elif(len(L)==0):
+    if(row<0 or col<0 or row>len(L) or col>len(L[0]) or len(L)==0):
         return None
     else:
         del L[row]
