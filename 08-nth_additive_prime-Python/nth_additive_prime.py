@@ -7,4 +7,31 @@
 
 
 def fun_nth_additive_prime(n):
-	return 1
+		found=1
+		guess=1
+		count=0
+		while(found):
+			if(additive_prime(guess)):
+
+				if(n==count):
+					found=0
+					return guess
+
+				guess=guess+1
+				count+=1
+			else:
+				guess=guess+1
+
+def additive_prime(n):
+  	
+
+def isprime(x):
+		if(x==2):
+				return True
+		else:
+				for i in range(2,x//2+1):
+						if(x%i==0):
+								return False
+		return True
+
+	
