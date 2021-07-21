@@ -18,5 +18,27 @@
 # assert(ishappynumber(405) == False)
 
 def ishappynumber(n):
-	# your code goes here
-	pass
+	if(n==1):
+		return True
+	elif(n<10):
+  		return False
+	a=sum_of_digits(n)
+	if(a==1):
+  		return True
+	elif(a<10):
+  		return False
+
+def sum_of_digits(n):
+	sum=0
+	while(1):
+		m=n%10
+		sum=sum+m*m
+		n=n//10
+		if(n==0):
+			if(sum<10):
+				return sum
+			n=sum
+			sum=0
+		
+
+# print(ishappynumber(97))
