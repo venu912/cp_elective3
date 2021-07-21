@@ -25,11 +25,15 @@ def nth_happy_number(n):
 	return guess
 
 def ishappynumber(n):
-		a=sum_of_digits(n)
-		if(a==1):
-				return a
-		elif(a<10):
-				return False
+	if(n==1):
+			return True
+	elif(n<1):
+			return False
+	a=sum_of_digits(n)
+	if(a==1):
+			return a
+	elif(a<10):
+			return False
 
 def sum_of_digits(n):
 	sum=0
