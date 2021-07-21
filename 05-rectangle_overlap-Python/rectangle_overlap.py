@@ -8,9 +8,9 @@
 # head down (so we say that "up is down")
 
 def fun_rectangle_overlap(left1, top1, width1, height1, left2, top2, width2, height2):
-    if((left1>=width2) or (width1<=left2) or (height1<=top2) or (top1>=height2)):
-        return False
-    else:
+    if((left1==left2) or (top1==top2) or (width1==width2) or (height1==height2)):
         return True
+    else:
+        return False
 
         
