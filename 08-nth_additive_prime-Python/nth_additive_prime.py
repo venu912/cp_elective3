@@ -16,14 +16,13 @@ def fun_nth_additive_prime(n):
 	return guess
 
 def additive_prime(n):
-  	
-		sum=0
-		while(n):
-				m=n%10
-				sum=sum+m
-				n=n//10
-		if(sum>1 and isprime(sum)):
-  			return sum
+	sum=0
+	while(n):
+			m=n%10
+			sum=sum+m
+			n=n//10
+	if(isprime(sum)):
+			return sum
 
 def isprime(x):
 		if(x<2):
