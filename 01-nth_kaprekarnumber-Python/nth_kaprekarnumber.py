@@ -9,14 +9,14 @@
 
 # import math
 
-# def fun_nth_kaprekarnumber(n):
-#         found = 0
-#         guess = 0
-#         while (found <= n):
-#                 guess += 1
-#                 if (kaprekarnumber(guess)):
-#                         found += 1
-#         return guess
+def fun_nth_kaprekarnumber(n):
+        found = 0
+        guess = 0
+        while (found <= n):
+                guess += 1
+                if (kaprekarnumber(guess)):
+                        found += 1
+        return guess
 
 def kaprekarnumber(n):
     a=n*n
@@ -32,18 +32,24 @@ def kaprekarnumber(n):
         z=z*10
         b-=1
     if(count1%2!=0):
-        z+=1
+        z=z*10    
     c=y//z
     d=y%z
     e=c+d
-    return e
+    if(y==e):
+        return e
+    else:
+        return None
 
-print(kaprekarnumber(45))
+print(fun_nth_kaprekarnumber(1))
 print(kaprekarnumber(55))
 print(kaprekarnumber(99))
 print(kaprekarnumber(2223))
 print(kaprekarnumber(9))
 print(kaprekarnumber(1))
+print(kaprekarnumber(2728))
+print(kaprekarnumber(703))
+print(kaprekarnumber(4))
 
 
 
