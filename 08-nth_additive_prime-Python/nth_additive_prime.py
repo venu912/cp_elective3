@@ -33,7 +33,7 @@ def isprime(x):
 		return True
 
 #(0,2),(1,3),(5,23),(7,41),(20,157),(25,197)
-# print(fun_nth_additive_prime(7))
+# print(fun_nth_additive_prime(67))
 # print(fun_nth_additive_prime(0))
 # print(fun_nth_additive_prime(1))
 # print(fun_nth_additive_prime(25))
