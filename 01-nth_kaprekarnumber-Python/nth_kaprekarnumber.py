@@ -7,7 +7,43 @@
 # and returns the nth Kaprekar number, where as usual we start counting at n==0.
 
 
-import math
+# import math
 
-def fun_nth_kaprekarnumber(n):
-    return 1;
+# def fun_nth_kaprekarnumber(n):
+#         found = 0
+#         guess = 0
+#         while (found <= n):
+#                 guess += 1
+#                 if (kaprekarnumber(guess)):
+#                         found += 1
+#         return guess
+
+def kaprekarnumber(n):
+    a=n*n
+    y=a
+    count1=0
+    while(a):
+        count1+=1
+        a=a//10
+    count2=count1
+    z=1
+    b=count2//2
+    while(b):
+        z=z*10
+        b-=1
+    if(count1%2!=0):
+        z+=1
+    c=y//z
+    d=y%z
+    e=c+d
+    return e
+
+print(kaprekarnumber(45))
+print(kaprekarnumber(55))
+print(kaprekarnumber(99))
+print(kaprekarnumber(2223))
+print(kaprekarnumber(9))
+print(kaprekarnumber(1))
+
+
+
