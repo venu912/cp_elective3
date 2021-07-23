@@ -14,11 +14,11 @@ def fun_nth_kaprekarnumber(n):
         guess = 0
         while (found <= n):
                 guess += 1
-                if (kaprekarnumber(guess)):
+                if (kaprekarnumber(guess,found)):
                         found += 1
         return guess
 
-def kaprekarnumber(n):
+def kaprekarnumber(n,f):
     a=n*n
     y=a
     count1=0
@@ -34,22 +34,31 @@ def kaprekarnumber(n):
     if(count1%2!=0):
         z=z*10    
     c=y//z
+    #print(n)
+    if(f>9):
+        if(c%10==0):
+            #print(c)
+            c=c//10
     d=y%z
     e=c+d
-    if(y==e):
+    if(n==e):
         return e
     else:
         return None
 
-print(fun_nth_kaprekarnumber(1))
-print(kaprekarnumber(55))
-print(kaprekarnumber(99))
-print(kaprekarnumber(2223))
-print(kaprekarnumber(9))
-print(kaprekarnumber(1))
-print(kaprekarnumber(2728))
-print(kaprekarnumber(703))
-print(kaprekarnumber(4))
+print(fun_nth_kaprekarnumber(9))
+print(fun_nth_kaprekarnumber(10))
+print(fun_nth_kaprekarnumber(12))
+#print(kaprekarnumber(2728))
+#print(kaprekarnumber(4879))
+#print(kaprekarnumber(7777))
+#print(kaprekarnumber(77778))
+# print(kaprekarnumber(2223))
+# print(kaprekarnumber(9))
+# print(kaprekarnumber(1))
+# print(kaprekarnumber(2728))
+# print(kaprekarnumber(703))
+# print(kaprekarnumber(4))
 
 
 
