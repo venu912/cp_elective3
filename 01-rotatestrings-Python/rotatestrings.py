@@ -11,7 +11,7 @@ def fun_rotatestrings(s, n):
 		if(len(s)==0 or n==0):
 				return s
 		elif(n>0):
-			s1=s[n:]+s[0:n]
+			s1=s[n:]+s[:n]
 			return s1
 		elif(n<0):
 			s1=s[n:]+s[:n]
