@@ -5,4 +5,25 @@
 
 
 def fun_recursions_alternatingsum(l): 
-	return 0
+	if(len(l)==0):
+		return 0
+	i=0
+	sum=0
+	a=alternate_sum(l,i,sum)
+	return a
+
+def alternate_sum(l,i,sum):
+		if(l[i]!=None):
+			i+=1
+			if(i%2!=0):
+					sum+=l[i-1]
+					x=alternate_sum(l,i,sum)
+			else:
+					sum-=l[i-1]
+					y=alternate_sum(l,i,sum)
+		else:
+  			return sum
+
+
+print(fun_recursions_alternatingsum([1,2,3,4,5]))
+
