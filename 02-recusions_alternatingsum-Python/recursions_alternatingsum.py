@@ -13,14 +13,14 @@ def fun_recursions_alternatingsum(l):
 	return a
 
 def alternate_sum(l,i,sum):
-		if(l[i]!=None):
+		if(i<len(l)):
 			i+=1
 			if(i%2!=0):
 					sum+=l[i-1]
-					x=alternate_sum(l,i,sum)
+					return alternate_sum(l,i,sum)
 			else:
 					sum-=l[i-1]
-					y=alternate_sum(l,i,sum)
+					return alternate_sum(l,i,sum)
 		else:
   			return sum
 
