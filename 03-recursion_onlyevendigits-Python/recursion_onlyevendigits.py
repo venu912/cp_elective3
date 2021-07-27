@@ -9,4 +9,29 @@
 # Remember to not use strings. You may not use loops/iteration in this problem.
 
 def fun_recursion_onlyevendigits(l): 
-		return []
+	if(len(l)==0):
+		return 0
+	i=0
+	sum=0
+	a=only_evendigits(l,i,sum)
+	return a
+
+def only_evendigits(l,i,sum):
+	if(i<len(l)):
+			i+=1
+			j=0
+			b=only_even(l[i],str(l[i]),j)
+
+def only_even(p,q,j):
+	if(j<len(q)):
+		j+=1
+		if(p%10==0):
+  		
+			p=p//10
+			return only_even(p,q,j)
+		elif((p//10)%2==0):
+  			total=total*
+				p=p//10
+				return only_even(p,q,j)
+	else:
+		return 
