@@ -15,35 +15,59 @@
 # None if the two matrices 
 # cannot be added because they are of different dimensions.
 
-def matrixadd(L, M):
+# def matrixadd(L, M):
 		
-	N=[]
-	for i in range(len(L)):
-			p=[]
-			for j in range(len(L[0])):
-					# N[i][j]=L[i][j]+M[i][j]
-					p.append(0)
-			N.append(p)
+# 	N=[]
+# 	for i in range(len(L)):
+# 			p=[]
+# 			for j in range(len(L[0])):
+# 					# N[i][j]=L[i][j]+M[i][j]
+# 					p.append(0)
+# 			N.append(p)
 
-	if(len(L)!=len(M) or len(L[0])!=len(M[0])):
-  		#print("a")
-  		return None
-	# elif(len(L[0])!=len(M[0]) or len(M[0])!=len(M[1])):
-  # 		#print("b")
-  # 		return None
+# 	if(len(L)!=len(M) or len(L[0])!=len(M[0])):
+#   		#print("a")
+#   		return None
+# 	# elif(len(L[0])!=len(M[0]) or len(M[0])!=len(M[1])):
+#   # 		#print("b")
+#   # 		return None
+# 	else:
+# 		for i in L:
+# 			for j in M:
+# 				if(len(i)!=len(j)):
+# 					return None		
+# 				else:
+#   					for i in range(len(L)):
+#   							for j in range(len(L[0])):
+#   									N[i][j]=L[i][j]+M[i][j]
+# 				return N
+
+				
+# 		# print("c")
+# 		# result = [[L[i][j] + M[i][j]  for j in range(len(L[0]))] for i in range(len(L))]
+# 		#return N
+# print(matrixadd([[1,  2,  3],[4,  5,  6]], [[21, 22, 23], [24, 25, 26]]))
+
+def matrixadd(L, M):
+	row1=len(L)
+	col1=len(L[0])
+	row2=len(M)
+	col2=len(M[0])
+	r=[]
+	for i in range(row1):
+		c=[]
+		for j in range(col1):
+			c.append(0)
+		r.append(c)
+	if(row1!=row2 or col1!=col2):
+		return None
 	else:
 		for i in L:
 			for j in M:
 				if(len(i)!=len(j)):
-					return None		
-				else:
-  					for i in range(len(L)):
-  							for j in range(len(L[0])):
-  									N[i][j]=L[i][j]+M[i][j]
-				return N
-
-				
-		# print("c")
-		# result = [[L[i][j] + M[i][j]  for j in range(len(L[0]))] for i in range(len(L))]
-		#return N
-print(matrixadd([[1,  2,  3],[4,  5,  6]], [[21, 22, 23], [24, 25, 26]]))
+					return None
+		else:
+			for i in range(row1):
+				for j in range(col1):
+					r[i][j]=L[i][j]+M[i][j]
+		return r
