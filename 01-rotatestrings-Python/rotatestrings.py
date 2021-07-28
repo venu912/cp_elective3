@@ -10,12 +10,13 @@ def fun_rotatestrings(s, n):
 		n=n%(len(s))
 		if(len(s)==0 or n==0):
 				return s
-		elif(n>0):
+		else:
 			s1=s[n:]+s[:n]
 			return s1
-		elif(n<0):
-			s1=s[n:]+s[:n]
-			return s1
+		#elif(n>0):
+		# elif(n<0):
+		# 	s1=s[n:]+s[:n]
+		# 	return s1
 		
   			
 print(fun_rotatestrings('abcd',-5))
