@@ -41,15 +41,15 @@ def fun_recursion_onlyevendigits(l):
 	if(len(l)==0):
 		return empty
 	else:
-		even=wrapper(l[0])
+		even=only_even(l[0])
 		empty.append(even)
 		return empty+fun_recursion_onlyevendigits(l[1:])
 
-def wrapper(n,i=0,null=0):
+def only_even(n,i=0,num=0):
 	if(n==0):
-		return null
+		return num
 	temp=n%10
 	if(temp%2==0):
-		null+=(10**i*temp)
+		num+=(10**i*temp)
 		i+=1
-	return wrapper(n//10,i,null)
+	return only_even(n//10,i,num)
