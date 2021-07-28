@@ -9,6 +9,12 @@
 
 
 
-def fun_getaverage(s): 
-	return 0.0
+#def fun_getaverage(s):
+		
+#		return inp
+
+s=input()
+inp=s().split(",")
+print(inp[0])
+#print(fun_getaverage("13,14"))
 
