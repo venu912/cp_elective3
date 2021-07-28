@@ -9,12 +9,21 @@
 
 
 
-#def fun_getaverage(s):
-		
-#		return inp
+def fun_getaverage(s):
+		inp=s.split(",")
+		print(len(inp))
+		sum=0
+		c=0
+		avg=0
+		for i in range(len(inp)):
+			if(type(inp[i])!=int):
+					continue
+			else:
+				sum+=inp[i]
+				c+=1  
+		if(c>0):
+  			avg=sum/c
+		return avg
 
-s=input()
-inp=s().split(",")
-print(inp[0])
-#print(fun_getaverage("13,14"))
+print(fun_getaverage('13,excused,14,absent'))
 
