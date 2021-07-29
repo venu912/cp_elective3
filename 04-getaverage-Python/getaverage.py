@@ -11,16 +11,17 @@
 
 def fun_getaverage(s):
 		inp=s.split(",")
-		print(len(inp))
+		#print(len(inp))
 		sum=0
 		c=0
 		avg=0
 		for i in range(len(inp)):
-			if(type(inp[i])!=int):
-					continue
-			else:
+			if(inp[i].isnumeric()):
+				inp[i]=int(inp[i])
 				sum+=inp[i]
-				c+=1  
+				c+=1 
+			else:
+				continue				 
 		if(c>0):
   			avg=sum/c
 		return avg
