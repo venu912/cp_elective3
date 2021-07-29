@@ -66,8 +66,8 @@ def matrixadd(L, M):
 			for j in M:
 				if(len(i)!=len(j)):
 					return None
-		else:
-			for i in range(row1):
-				for j in range(col1):
-					r[i][j]=L[i][j]+M[i][j]
+		
+		for i in range(row1):
+			for j in range(col1):
+				r[i][j]=L[i][j]+M[i][j]
 		return r
