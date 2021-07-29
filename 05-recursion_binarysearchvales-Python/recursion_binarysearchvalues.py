@@ -18,6 +18,34 @@
 # Hint: Do not slice the list L, but rather adjust the indexes into L. 
 
 def recursion_binarysearchvalues(L, v):
-	# Your codes goes here
-	pass
+	empty=[]
+	lo=0
+	hi=len(L)-1
+	return binary_search(L,lo,hi,v,empty)
+
+def binary_search(L,lo,hi,v,empty):
+	if(len(empty)>=len(L)/2):
+  		return empty
+	else:
+		mid=(lo+hi)//2
+		if(L[mid]==v):
+				empty=form_tuple(mid,v,empty)
+				return empty
+		elif((ord(L[mid])>(ord(v)))):
+				hi=mid-1
+				empty=form_tuple(mid,L[mid],empty)
+				return binary_search(L,lo,hi,v,empty)
+		else:
+				lo=mid+1
+				empty=form_tuple(mid,L[mid],empty)
+				return binary_search(L,lo,hi,v,empty)
+
+def form_tuple(num,var,empty):
+		tup=(num,var)
+		empty.append(tup)
+		return empty
+
+print(recursion_binarysearchvalues(['a', 'c', 'f', 'g', 'm', 'q'],'f'))
+  		
+
 	
