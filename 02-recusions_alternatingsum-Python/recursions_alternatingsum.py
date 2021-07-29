@@ -7,12 +7,9 @@
 def fun_recursions_alternatingsum(l): 
 	if(len(l)==0):
 		return 0
-	i=0
-	sum=0
-	a=alternate_sum(l,i,sum)
-	return a
-
-def alternate_sum(l,i,sum):
+	return alternate_sum(l)
+	
+def alternate_sum(l,i=0,sum=0):
 		if(i<len(l)):
 			i+=1
 			if(i%2!=0):
