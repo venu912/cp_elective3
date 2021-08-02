@@ -10,5 +10,43 @@
 # However, they also are here specifically because they are just the right helper 
 # functions to make nthHappyNumber(n) easier to write!
 def ishappyprimenumber(n):
-    # Your code goes here
-    pass
+    if(ishappynumber(n)):
+        if(isprime(n)):
+            return True
+        else:
+            return False
+    else:
+        return False
+
+
+def ishappynumber(n):
+        if(n==1):
+                return True
+        elif(n<1):
+                return False
+        a=sum_of_digits(n)
+        if(a==1):
+                return a
+        elif(a<10):
+                return False
+
+def sum_of_digits(n):
+	sum=0
+	while(1):
+		m=n%10
+		sum=sum+m*m
+		n=n//10
+		if(n==0):
+			if(sum<10):
+				return sum
+			n=sum
+			sum=0
+
+def isprime(n):
+    for i in range(2,n):
+         if(n%i==0):
+             #print(i)
+             return False
+    return True
+print(isprime(833))
+#print(ishappyprimenumber(833))
