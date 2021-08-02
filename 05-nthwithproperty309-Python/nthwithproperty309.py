@@ -5,5 +5,25 @@
 # the nth number with Property309.
 
 def nthwithproperty309(n):
-	# Your code goes here
-	pass
+		found = -1
+		guess = 0
+		while (found < n):
+				guess += 1
+				if (property309(guess)):
+						found += 1
+		return guess
+  	
+def property309(n):
+	a=n*n*n*n*n
+	#print(a)
+	b=str(a)
+	c='0123456789'
+	for i in c:
+		if(i in b):
+			continue
+		else:
+			return False
+	return True
+
+#print(property309(121))
+print(nthwithproperty309(309))
