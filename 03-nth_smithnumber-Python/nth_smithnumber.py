@@ -10,3 +10,36 @@
 
 def fun_nth_smithnumber(n):
     return 1
+
+def smithnumber(n):
+    empty=[]
+    return isprime(n,empty,sum=0)
+
+# def smithnumber(n,p=2):
+#     sum=0
+#     if(isprime(p) and div(n,p,sum)):
+#         if(isprime(m)):
+#             True
+
+def isprime(p,empty,i=2,sum=0):
+    for i in range(2,p):
+        if(p%i==0):
+            empty.append(i)
+            sum+=i
+            return isprime(p//i,empty,i=2,sum)
+        else:
+            continue
+    empty.append(p)
+    #sum+=p
+    return empty,sum
+
+print(smithnumber(378))
+
+# def div(n,p,sum):
+#     m=n
+#     if(n%p==0):
+#         sum+=p
+#         m=n//2
+#         return sum,m
+#     else:
+#         return smithnumber(n,p+1)
