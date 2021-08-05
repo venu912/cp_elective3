@@ -16,7 +16,35 @@
 
 def topScorer(data):
     # Your code goes here...
-    return ""
+    if(data==""):
+        return None
+    players=data.splitlines()
+    names=[]
+    scores=[]
+    
+    for i in range(len(players)):
+        d=players[i].split(",")
+        sum=0
+        for j in range(len(d)):
+            if(j==0):
+                names.append(d[j])
+            else:
+                sum+=int(d[j])
+            if(j==len(d)-1):
+                scores.append(sum)
+    top=max(scores)
+    flag=[]
+    s=""
+    for i in range(len(scores)):
+        if(scores[i]==top):
+            flag.append(i)
+    for i in range(len(flag)):
+        if(i>0):
+            s+=","
+        s+=names[flag[i]]
+        
+        
+    return s
 
 data = '''\
 Fred,10,20,30,40
