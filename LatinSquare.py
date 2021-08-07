@@ -38,7 +38,7 @@ def isLatinSquare(a):
         return "No"
 
 
-assert(isLatinSquare([[1,2],[2,1,3]])=="Yes")
+assert(isLatinSquare([[1,2],[2,1]])=="Yes")
 print("All Passed")
 
 #print(isLatinSquare([[1,2,3],[2,3,1],[3,1,2]]))    
